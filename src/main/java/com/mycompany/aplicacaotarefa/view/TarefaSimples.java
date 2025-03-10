@@ -17,12 +17,12 @@ import javax.swing.JOptionPane;
  *
  * @author luis
  */
-public class TarefaView extends javax.swing.JFrame {
+public class TarefaSimples extends javax.swing.JFrame {
     
 
    
 
-    public TarefaView() {
+    public TarefaSimples() {
         initComponents();
     }
 
@@ -35,21 +35,16 @@ public class TarefaView extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jButton1 = new javax.swing.JButton();
         jbotaoSalvar = new javax.swing.JButton();
         jbotaoCancelar = new javax.swing.JButton();
         jLayeredPane1 = new javax.swing.JLayeredPane();
-        jlblDescricao = new javax.swing.JLabel();
         jtxtDescricao = new javax.swing.JTextField();
+        jlblDescricao = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jcomboPrior = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
         jtxtCriacao = new javax.swing.JFormattedTextField();
-        jLabel3 = new javax.swing.JLabel();
-        jtxtPrazo = new javax.swing.JFormattedTextField();
-        jbSimples = new javax.swing.JButton();
-
-        jButton1.setText("jButton1");
+        jbPrazo = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -67,15 +62,15 @@ public class TarefaView extends javax.swing.JFrame {
             }
         });
 
-        jLayeredPane1.setBorder(javax.swing.BorderFactory.createTitledBorder("Tarefa com Prazo"));
-
-        jlblDescricao.setText("Descricao:");
+        jLayeredPane1.setBorder(javax.swing.BorderFactory.createTitledBorder("Cadastro Simples"));
 
         jtxtDescricao.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jtxtDescricaoActionPerformed(evt);
             }
         });
+
+        jlblDescricao.setText("Descricao:");
 
         jLabel1.setText("Prioridade:");
 
@@ -94,22 +89,12 @@ public class TarefaView extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setText("Data de Prazo:");
-
-        try {
-            jtxtPrazo.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##/##/####")));
-        } catch (java.text.ParseException ex) {
-            ex.printStackTrace();
-        }
-
-        jLayeredPane1.setLayer(jlblDescricao, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jtxtDescricao, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane1.setLayer(jlblDescricao, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jcomboPrior, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jLabel2, javax.swing.JLayeredPane.DEFAULT_LAYER);
         jLayeredPane1.setLayer(jtxtCriacao, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(jLabel3, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane1.setLayer(jtxtPrazo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane1Layout = new javax.swing.GroupLayout(jLayeredPane1);
         jLayeredPane1.setLayout(jLayeredPane1Layout);
@@ -129,39 +114,32 @@ public class TarefaView extends javax.swing.JFrame {
                     .addGroup(jLayeredPane1Layout.createSequentialGroup()
                         .addComponent(jLabel2)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jtxtCriacao, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jtxtPrazo, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(60, Short.MAX_VALUE))
+                        .addComponent(jtxtCriacao, javax.swing.GroupLayout.PREFERRED_SIZE, 178, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(58, Short.MAX_VALUE))
         );
         jLayeredPane1Layout.setVerticalGroup(
             jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jLayeredPane1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGap(14, 14, 14)
+                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jtxtDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jlblDescricao))
-                .addGap(18, 18, 18)
+                    .addComponent(jlblDescricao, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jcomboPrior, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(jtxtCriacao, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jLayeredPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(jtxtPrazo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addContainerGap(41, Short.MAX_VALUE))
         );
 
-        jbSimples.setText("Tarefa Simples");
-        jbSimples.addActionListener(new java.awt.event.ActionListener() {
+        jbPrazo.setText("Prazo");
+        jbPrazo.setToolTipText("");
+        jbPrazo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jbSimplesActionPerformed(evt);
+                jbPrazoActionPerformed(evt);
             }
         });
 
@@ -170,28 +148,29 @@ public class TarefaView extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(49, 49, 49)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(jbotaoCancelar)
-                        .addGap(42, 42, 42)
+                        .addGap(61, 61, 61)
                         .addComponent(jbotaoSalvar)
-                        .addGap(35, 35, 35)
-                        .addComponent(jbSimples)))
-                .addContainerGap(330, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jbotaoCancelar)
+                        .addGap(18, 18, 18)
+                        .addComponent(jbPrazo))
+                    .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(77, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(17, 17, 17)
+                .addGap(36, 36, 36)
                 .addComponent(jLayeredPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jbotaoSalvar)
                     .addComponent(jbotaoCancelar)
-                    .addComponent(jbSimples))
-                .addContainerGap(126, Short.MAX_VALUE))
+                    .addComponent(jbPrazo))
+                .addContainerGap(156, Short.MAX_VALUE))
         );
 
         pack();
@@ -214,14 +193,13 @@ public class TarefaView extends javax.swing.JFrame {
         String prioriadadeAlterar = (String) jcomboPrior.getSelectedItem();
         int prioridade = Integer.parseInt(prioriadadeAlterar);
         String entCriacao = jtxtCriacao.getText();
-       
+       LocalDate dataPrazo = null;
         
         try{
             TarefaController tc = new  TarefaController();
              DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
             LocalDate dataCriacao = LocalDate.parse(entCriacao,formatter);
-            String entPrazo = jtxtPrazo.getText();
-            LocalDate dataPrazo = LocalDate.parse(entPrazo, formatter);
+            
             
             tc.TarefaCadastrar(descricao, prioridade, dataCriacao, dataPrazo);
            
@@ -234,12 +212,12 @@ public class TarefaView extends javax.swing.JFrame {
         
     }//GEN-LAST:event_jbotaoSalvarActionPerformed
 
-    private void jbSimplesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbSimplesActionPerformed
-       TarefaSimples ts = new TarefaSimples();
-       ts.setVisible(true);
-       
-       this.dispose();
-    }//GEN-LAST:event_jbSimplesActionPerformed
+    private void jbPrazoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPrazoActionPerformed
+        TarefaView tv = new TarefaView();
+        tv.setVisible(true);
+        
+        this.dispose();
+    }//GEN-LAST:event_jbPrazoActionPerformed
      public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -266,24 +244,21 @@ public class TarefaView extends javax.swing.JFrame {
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(() -> {
-            new TarefaView().setVisible(true);
+            new TarefaSimples().setVisible(true);
         });
     }
     
    
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLayeredPane jLayeredPane1;
-    private javax.swing.JButton jbSimples;
+    private javax.swing.JButton jbPrazo;
     private javax.swing.JButton jbotaoCancelar;
     private javax.swing.JButton jbotaoSalvar;
     private javax.swing.JComboBox<String> jcomboPrior;
     private javax.swing.JLabel jlblDescricao;
     private javax.swing.JFormattedTextField jtxtCriacao;
     private javax.swing.JTextField jtxtDescricao;
-    private javax.swing.JFormattedTextField jtxtPrazo;
     // End of variables declaration//GEN-END:variables
 }
